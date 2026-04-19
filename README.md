@@ -8,7 +8,7 @@
 
 **An end-to-end data analytics pipeline featuring exploratory data analysis, statistical testing, customer segmentation, and ML-powered demand forecasting — all wrapped in an interactive Streamlit dashboard.**
 
-[📊 View Notebooks](#-notebooks) • [🚀 Quick Start](#-quick-start) • [📁 Project Structure](#-project-structure) • [📈 Key Insights](#-key-insights)
+[Dashboard(https://retailpulse2-jonikpatel.streamlit.app/)•[📊 View Notebooks](#-notebooks) • [🚀 Quick Start](#-quick-start) • [📁 Project Structure](#-project-structure) • [📈 Key Insights](#-key-insights)
 
 ---
 
@@ -27,79 +27,7 @@ RetailPulse is a production-style data analytics project built to demonstrate th
 
 ---
 
-## 🚀 Quick Start
 
-### 1. Clone & Install
-
-```bash
-git clone https://github.com/yourusername/retailpulse.git
-cd retailpulse
-pip install -r requirements.txt
-```
-
-### 2. Generate the Dataset
-
-```bash
-python data/generate_dataset.py
-```
-
-This generates `data/processed/sales_data.csv` — 50,000 rows of realistic retail transactions.
-
-### 3. Run the Dashboard
-
-```bash
-streamlit run dashboard/app.py
-```
-
-### 4. Explore the Notebooks
-
-```bash
-jupyter notebook notebooks/
-```
-
-Run in order: `01` → `02` → `03`.
-
----
-
-## 📁 Project Structure
-
-```text
-retailpulse/
-│
-├── data/
-│   ├── generate_dataset.py        # Synthetic data generator
-│   ├── raw/                       # Original unmodified data
-│   └── processed/                 # Cleaned, feature-engineered data
-│
-├── notebooks/
-│   ├── 01_EDA_and_Cleaning.ipynb      # Exploratory Data Analysis
-│   ├── 02_Statistical_Analysis.ipynb  # Hypothesis tests & correlation
-│   └── 03_Sales_Forecasting.ipynb     # SARIMA + XGBoost forecasting
-│
-├── src/
-│   ├── __init__.py
-│   ├── data_loader.py             # Load & validate data
-│   ├── preprocessing.py           # Cleaning & feature engineering
-│   ├── analysis.py                # Statistical analysis functions
-│   ├── forecasting.py             # Forecasting models (SARIMA, XGBoost)
-│   └── visualization.py           # Reusable chart builders
-│
-├── dashboard/
-│   └── app.py                     # Streamlit interactive dashboard
-│
-├── tests/
-│   └── test_preprocessing.py      # Unit tests for data pipeline
-│
-├── reports/
-│   └── executive_summary.md       # Business-facing findings
-│
-├── requirements.txt
-├── setup.cfg
-├── Makefile
-└── LICENSE
-```
-
----
 
 ## 📊 Notebooks
 
@@ -168,4 +96,4 @@ MIT License — see LICENSE for details.
 
 ---
 
-Built with curiosity and data by Your Name.
+Built with curiosity and data by Jonik Patel.
