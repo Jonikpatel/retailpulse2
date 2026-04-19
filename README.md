@@ -8,7 +8,7 @@
 
 **An end-to-end data analytics pipeline featuring exploratory data analysis, statistical testing, customer segmentation, and ML-powered demand forecasting — all wrapped in an interactive Streamlit dashboard.**
 
-[Dashboard(https://retailpulse2-jonikpatel.streamlit.app/)•[📊 View Notebooks](#-notebooks) • [🚀 Quick Start](#-quick-start) • [📁 Project Structure](#-project-structure) • [📈 Key Insights](#-key-insights)
+[Dashboard(https://retailpulse2-jonikpatel.streamlit.app/) • [📊 View Notebooks](#-notebooks) • [🚀 Quick Start](#-quick-start) • [📁 Project Structure](#-project-structure) • [📈 Key Insights](#-key-insights)
 
 ---
 
