@@ -17,16 +17,11 @@ def revenue_over_time(df):
     if not isinstance(df.index, pd.DatetimeIndex):
         df.index = pd.to_datetime(df.index)
 
-    # Resample on the datetime index
-    data = df["net_revenue"].resample("M").sum().reset_index()
+    # Use 'MS' (month start) instead of deprecated 'M'
+    data = df["net_revenue"].resample("MS").sum().reset_index()
 
-    # After reset_index, the first column is the date
     date_col = data.columns[0]
-
     fig = px.line(data, x=date_col, y="net_revenue", title="Monthly Revenue")
-    return fig
-
-    fig = px.line(data, x="order_date", y="net_revenue", title="Monthly Revenue")
     return fig
 
 
