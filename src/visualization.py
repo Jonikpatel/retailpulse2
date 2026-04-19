@@ -1,19 +1,30 @@
 import plotly.express as px
 
 
-def revenue_over_time(df):
-    # Ensure order_date is datetime
-    if df["order_date"].dtype != "datetime64[ns]":
-        df = df.copy()
-        df["order_date"] = pd.to_datetime(df["order_date"])
+import pandas as pd
+import plotly.express as px
 
-    # Resample on order_date as index
-    data = (
-        df.set_index("order_date")
-          .resample("M")["net_revenue"]
-          .sum()
-          .reset_index()
-    )
+
+def revenue_over_time(df):
+    df = df.copy()
+
+    # Case 1: date is a column
+    if "order_date" in df.columns:
+        df["order_date"] = pd.to_datetime(df["order_date"])
+        df = df.set_index("order_date")
+
+    # Case 2: date is already in the index
+    if not isinstance(df.index, pd.DatetimeIndex):
+        df.index = pd.to_datetime(df.index)
+
+    # Resample on the datetime index
+    data = df["net_revenue"].resample("M").sum().reset_index()
+
+    # After reset_index, the first column is the date
+    date_col = data.columns[0]
+
+    fig = px.line(data, x=date_col, y="net_revenue", title="Monthly Revenue")
+    return fig
 
     fig = px.line(data, x="order_date", y="net_revenue", title="Monthly Revenue")
     return fig
